@@ -24,7 +24,8 @@ Monitor and control a multi-tank system where tanks are distributed across a pla
 
 Basic code will be:
 Tank logic
->import socket
+
+import socket
 import threading
 import random
 import time
@@ -50,7 +51,8 @@ def tank_controller(tank_id, host, port, min_level=30, max_level=70):
         time.sleep(2)  # Update interval
 
 and for the central monitoring server
->def monitoring_server(host, port):
+
+def monitoring_server(host, port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.bind((host, port))
     sock.listen(5)
